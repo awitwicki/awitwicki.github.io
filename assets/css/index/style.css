@@ -2,10 +2,29 @@
 body {
     min-height: 100%;
     margin: 0;
-    background: url("../../anims/aye.gif") center;
-    background-size: cover;
-    display: flex;
     font-family: 'Product Sans';
+    background-color: black;
+}
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+}
+
+.absolute-center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto !important;
+    display: inline-table;
+}
+
+.rel {
+    position: relative;
+    display: inline-flex;
+    padding: 0.3em;
 }
 
 .center {
@@ -15,7 +34,6 @@ body {
 }
 
 .info {
-    margin: 1cm;
     min-width: 300px;
     width: 300px;
     display: flex;
@@ -28,7 +46,7 @@ body {
     -khtml-border-radius: 16px;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border: #24009b45 solid 2px;
+    border: #009b3445 solid 2px;
 }
 
 .buttons {
@@ -52,7 +70,7 @@ a.link {
     padding: 8px 20px; 
     margin: 4px;
     background: var(--back-color);
-    color: #fff;
+    color: var(--text-color);
     cursor: pointer;
     border-radius: 8px; 
     -webkit-border-radius: 8px;
@@ -78,17 +96,21 @@ a.link {
     border-radius: 5.6em;
 }
 
-.rel {
-    position: relative;
-    display: inline-flex;
-    padding: 0.3em;
-}
-
 a.link:hover,
 button:hover {
-    background: #fff6;
-    color: black;
-    text-shadow: 0px 0px 5px whitesmoke;
+    background: black;
+    box-shadow: 0px 0px 5px black;
+    color: var(--text-color-negative);
+    text-shadow: 0px 0px 5px var(--text-color-negative);
+}
+
+a.nolink:active,
+a.nolink:hover,
+a.nolink {
+    text-decoration: none;
+    color: #666;
+    outline: none;
+    border: none;
 }
 
 button:active, button:focus {
@@ -124,44 +146,9 @@ h2 {
     -moz-transition: .2ms;
 }
 
-.popup {
-    top: 10%;
-    left: 0;
-    right: 0;
-    font-size: 14px;
-    margin: auto;
-    width: 85%;
-    min-width: 320px;
-    max-width: 600px;
-    position: absolute;
-    padding: 15px 20px;
-    border: 1px solid #383838;
-    background: var(--over-color);
-    color: var(--popup-text-color);
-    z-index: 1000;
-    -webkit-border-radius: 14px;
-    -moz-border-radius: 14px;
-    -ms-border-radius: 14px;
-    border-radius: 14px;
-    font: 'Product Sans';
-    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
-}
-
 .btn {
     -webkit-transition: 0.2s;
     -o-transition: 0.2s;
     -moz-transition: 0.2s;
     transition: 0.2s;
-}
-
-a.nolink:active,
-a.nolink:hover,
-a.nolink {
-    text-decoration: none;
-    color: #666;
-    outline: none;
-    border: none;
 }
