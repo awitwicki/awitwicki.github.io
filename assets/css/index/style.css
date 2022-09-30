@@ -37,7 +37,7 @@ canvas {
     min-width: 300px;
     width: 300px;
     display: flex;
-    background: none;
+    background: #00000075;
     padding: 35px;
     color: var(--text-color);
     border-radius: 16px; 
