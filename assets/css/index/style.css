@@ -1,25 +1,21 @@
-/* index.html main page styles */
 body {
-    min-height: 100%;
     margin: 0;
-    font-family: 'Product Sans';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background-color: black;
+    font-family: 'Product Sans';
 }
 
 canvas {
-    width: 100vw;
-    height: 100vh;
-}
-
-.absolute-center {
     position: absolute;
-    left: 0;
-    right: 0;
+    width: 100%;
+    height: 100%;
     top: 0;
-    bottom: 0;
-    margin: auto !important;
-    display: inline-table;
-}
+    left: 0;
+    z-index: -1;
+  }
 
 .rel {
     position: relative;
@@ -37,7 +33,6 @@ canvas {
     min-width: 300px;
     width: 300px;
     display: flex;
-    background: #00000075;
     padding: 35px;
     color: var(--text-color);
     border-radius: 16px; 
@@ -83,33 +78,11 @@ a.link {
     border: var(--border);
 }
 
-.avatar-container {
-    margin: 0 0.4em 0 0;
-    display: inline-flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.avatar {
-    width: 10em;
-    height: 10em;
-    border-radius: 5.6em;
-}
-
 a.link:hover,
 button:hover {
     color: var(--text-color);
     box-shadow: 0px 0px 5px var(--text-color);
     text-shadow: 0px 0px 5px var(--text-color);
-}
-
-a.nolink:active,
-a.nolink:hover,
-a.nolink {
-    text-decoration: none;
-    color: #666;
-    outline: none;
-    border: none;
 }
 
 button:active, button:focus {
@@ -122,12 +95,6 @@ button::-moz-focus-inner {
 
 button::-webkit-focus-inner {
     border: 0;
-}
-
-hr {
-    border: none;
-    margin-bottom: 5px;
-    margin-top: 5px;
 }
 
 h3 {
